@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slinc Assistent Test</title>
+</head>
+<body>
+    <h1>Slinc AI Assistent Test</h1>
+
+<script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.init({
+        chatflowid: "59ebe84f-40d3-42bb-ba96-0e00865175ba",
+        apiHost: "https://flowise-hm4p.onrender.com",
+        chatflowConfig: {
+            // topK: 2
+        },
+        theme: {
+            button: {
+                backgroundColor: "#404040",
+                right: 20,
+                bottom: 20,
+                size: 48, // small | medium | large | number
+                dragAndDrop: true,
+                iconColor: "#f3d8e1",
+
+            },
+            tooltip: {
+                showTooltip: true,
+                tooltipMessage: 'Heb je een vraag?',
+                tooltipBackgroundColor: '#404040',
+                tooltipTextColor: 'white',
+                tooltipFontSize: 14,
+            },
+            chatWindow: {
+                showTitle: true,
+                title: 'Slinc AI Assistent',
+
+                showAgentMessages: true,
+                welcomeMessage: 'Hoi, ik ben de AI Assistent van Rachel. Je kunt mij je vragen stellen over Slinc.',
+                errorMessage: 'Ik ben momenteel helaas niet beschikbaar. Navigeer naar "Contact" om een vraag te stellen.',
+                backgroundColor: "#ffffff",
+                height: 500,
+                width: 400,
+                fontSize: 16,
+                poweredByTextColor: "#303235",
+                botMessage: {
+                    backgroundColor: "#f7f8ff",
+                    textColor: "#404040",
+                    showAvatar: true,
+                    avatarSrc: "https://raw.githubusercontent.com/youriwatson/chatbot_avatars/refs/heads/main/Slinc_avatar_png.jpg",
+                },
+                userMessage: {
+                    backgroundColor: "#f3d8e1",
+                    textColor: "#404040",
+                    showAvatar: false,
+                    avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
+                },
+                textInput: {
+                    placeholder: 'Stel je vraag',
+                    backgroundColor: '#ffffff',
+                    textColor: '#303235',
+                    sendButtonColor: '#f3d8e1',
+                    maxChars: 500,
+                    maxCharsWarningMessage: 'Maak je bericht wat korter',
+                    autoFocus: true, // If not used, autofocus is disabled on mobile and enabled on desktop. true enables it on both, false disables it on both.
+                    sendMessageSound: false,
+                    // sendSoundLocation: "send_message.mp3", // If this is not used, the default sound effect will be played if sendSoundMessage is true.
+                    receiveMessageSound: false,
+                    // receiveSoundLocation: "receive_message.mp3", // If this is not used, the default sound effect will be played if receiveSoundMessage is true.
+                },
+                feedback: {
+                    color: '#f3d8e1',
+                },
+                 footer: {
+                    textColor: '#fff',
+                    text: 'Powered by',
+                    company: 'Flowise',
+                    companyLink: 'https://flowiseai.com',
+                }
+            }
+        }
+    })
+</script>
+
+
+</body>
+</html>
